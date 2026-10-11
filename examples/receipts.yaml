@@ -1,0 +1,13 @@
+default: text
+doc_pass_f1: 1.0
+scalars:
+  total: {type: numeric, abs_tol: 0.005}
+  date: {type: date}
+  vendor: {type: fuzzy, threshold: 0.85}
+line_items:
+  items:
+    match_on: {name: 1.0, price: 0.5}
+    fields:
+      name: {type: fuzzy, threshold: 0.85}
+      qty: {type: numeric}
+      price: {type: numeric, abs_tol: 0.005}

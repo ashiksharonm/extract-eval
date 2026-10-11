@@ -1,0 +1,2 @@
+{"id": "r1", "data": {"vendor": "Cafe Roma", "date": "04/03/2026", "total": "17.5", "items": [{"name": "Croissant", "qty": 1, "price": "4.25"}, {"name": "Latte", "qty": 2, "price": "9.00"}]}}
+{"id": "r2", "data": {"vendor": "Bolt Fuel", "date": "2026-03-05", "total": "1234.50", "items": [{"name": "Diesel", "qty": 1, "price": "1234.5"}, {"name": "Tax", "qty": 1, "price": "0.00"}]}}
