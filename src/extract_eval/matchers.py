@@ -138,7 +138,7 @@ class Matcher:
         return s >= self.threshold if self.type == "fuzzy" else s >= 1.0
 
     def loosely_equal(self, gold: Any, pred: Any) -> bool:
-        """True when values differ only in formatting (case, punctuation, separators, date style)."""
+        """True when values differ only in formatting (case, punctuation, separators, dates)."""
         if normalize_text(gold) == normalize_text(pred):
             return True
         for loc in ("us", "eu"):
