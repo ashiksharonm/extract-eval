@@ -1,0 +1,18 @@
+# CORD-v2 receipts use '.' as thousands separator ("45.000"), hence locale: eu.
+default: text
+scalars:
+  total.total_price: {type: numeric, locale: eu}
+  total.cashprice: {type: numeric, locale: eu}
+  total.changeprice: {type: numeric, locale: eu}
+  total.creditcardprice: {type: numeric, locale: eu}
+  total.menuqty_cnt: {type: numeric, locale: eu}
+  sub_total.subtotal_price: {type: numeric, locale: eu}
+  sub_total.tax_price: {type: numeric, locale: eu}
+  sub_total.discount_price: {type: numeric, locale: eu}
+line_items:
+  menu:
+    match_on: {nm: 1.0, price: 0.5}
+    fields:
+      nm: {type: fuzzy, threshold: 0.9}
+      cnt: {type: numeric, locale: eu}
+      price: {type: numeric, locale: eu}

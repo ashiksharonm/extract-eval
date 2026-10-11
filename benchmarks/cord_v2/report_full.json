@@ -1,0 +1,8136 @@
+{
+  "extract_eval_version": "0.1.0",
+  "n_docs": 100,
+  "n_bootstrap": 1000,
+  "seed": 0,
+  "micro": {
+    "precision": 0.8688,
+    "recall": 0.8839,
+    "f1": 0.8763,
+    "f1_ci95": [
+      0.8416,
+      0.9077
+    ]
+  },
+  "macro": {
+    "f1": 0.8586,
+    "f1_ci95": [
+      0.7979,
+      0.9004
+    ]
+  },
+  "pass_rate": 0.47,
+  "doc_pass_f1": 1.0,
+  "error_buckets": {
+    "missing": 47,
+    "extra": 66,
+    "mismatch": 48,
+    "format_only": 32
+  },
+  "fields": {
+    "menu.cnt": {
+      "tp": 206,
+      "fp": 11,
+      "fn": 14,
+      "precision": 0.9493,
+      "recall": 0.9364,
+      "f1": 0.9428,
+      "f1_ci95": [
+        0.9065,
+        0.97
+      ],
+      "errors": {
+        "missing": 13,
+        "extra": 10,
+        "mismatch": 1,
+        "format_only": 0
+      }
+    },
+    "menu.nm": {
+      "tp": 213,
+      "fp": 48,
+      "fn": 38,
+      "precision": 0.8161,
+      "recall": 0.8486,
+      "f1": 0.832,
+      "f1_ci95": [
+        0.7645,
+        0.8955
+      ],
+      "errors": {
+        "missing": 12,
+        "extra": 22,
+        "mismatch": 26,
+        "format_only": 0
+      }
+    },
+    "menu.price": {
+      "tp": 218,
+      "fp": 41,
+      "fn": 28,
+      "precision": 0.8417,
+      "recall": 0.8862,
+      "f1": 0.8634,
+      "f1_ci95": [
+        0.8023,
+        0.9172
+      ],
+      "errors": {
+        "missing": 9,
+        "extra": 22,
+        "mismatch": 6,
+        "format_only": 13
+      }
+    },
+    "sub_total.discount_price": {
+      "tp": 4,
+      "fp": 0,
+      "fn": 2,
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8,
+      "f1_ci95": [
+        0.4,
+        1.0
+      ],
+      "errors": {
+        "missing": 2,
+        "extra": 0,
+        "mismatch": 0,
+        "format_only": 0
+      }
+    },
+    "sub_total.subtotal_price": {
+      "tp": 58,
+      "fp": 7,
+      "fn": 7,
+      "precision": 0.8923,
+      "recall": 0.8923,
+      "f1": 0.8923,
+      "f1_ci95": [
+        0.8143,
+        0.9584
+      ],
+      "errors": {
+        "missing": 1,
+        "extra": 1,
+        "mismatch": 3,
+        "format_only": 3
+      }
+    },
+    "sub_total.tax_price": {
+      "tp": 37,
+      "fp": 6,
+      "fn": 6,
+      "precision": 0.8605,
+      "recall": 0.8605,
+      "f1": 0.8605,
+      "f1_ci95": [
+        0.7524,
+        0.95
+      ],
+      "errors": {
+        "missing": 1,
+        "extra": 1,
+        "mismatch": 2,
+        "format_only": 3
+      }
+    },
+    "total.cashprice": {
+      "tp": 60,
+      "fp": 7,
+      "fn": 7,
+      "precision": 0.8955,
+      "recall": 0.8955,
+      "f1": 0.8955,
+      "f1_ci95": [
+        0.8201,
+        0.9546
+      ],
+      "errors": {
+        "missing": 1,
+        "extra": 1,
+        "mismatch": 4,
+        "format_only": 2
+      }
+    },
+    "total.changeprice": {
+      "tp": 51,
+      "fp": 8,
+      "fn": 5,
+      "precision": 0.8644,
+      "recall": 0.9107,
+      "f1": 0.887,
+      "f1_ci95": [
+        0.8033,
+        0.955
+      ],
+      "errors": {
+        "missing": 0,
+        "extra": 3,
+        "mismatch": 0,
+        "format_only": 5
+      }
+    },
+    "total.creditcardprice": {
+      "tp": 12,
+      "fp": 1,
+      "fn": 4,
+      "precision": 0.9231,
+      "recall": 0.75,
+      "f1": 0.8276,
+      "f1_ci95": [
+        0.6154,
+        0.9697
+      ],
+      "errors": {
+        "missing": 3,
+        "extra": 0,
+        "mismatch": 1,
+        "format_only": 0
+      }
+    },
+    "total.menuqty_cnt": {
+      "tp": 21,
+      "fp": 7,
+      "fn": 8,
+      "precision": 0.75,
+      "recall": 0.7241,
+      "f1": 0.7368,
+      "f1_ci95": [
+        0.56,
+        0.8772
+      ],
+      "errors": {
+        "missing": 3,
+        "extra": 2,
+        "mismatch": 5,
+        "format_only": 0
+      }
+    },
+    "total.total_price": {
+      "tp": 87,
+      "fp": 10,
+      "fn": 8,
+      "precision": 0.8969,
+      "recall": 0.9158,
+      "f1": 0.9062,
+      "f1_ci95": [
+        0.851,
+        0.9534
+      ],
+      "errors": {
+        "missing": 2,
+        "extra": 4,
+        "mismatch": 0,
+        "format_only": 6
+      }
+    }
+  },
+  "docs": {
+    "cord_test_000": {
+      "tp": 5,
+      "fp": 2,
+      "fn": 4,
+      "f1": 0.625,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          1
+        ],
+        "total.menuqty_cnt": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          1,
+          1
+        ],
+        "sub_total.tax_price": [
+          0,
+          1,
+          1
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          1
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          1,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_001": {
+      "tp": 8,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          3,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          0,
+          0,
+          0
+        ],
+        "menu.price": [
+          3,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_002": {
+      "tp": 7,
+      "fp": 3,
+      "fn": 1,
+      "f1": 0.7778,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          0,
+          2,
+          1
+        ],
+        "menu.cnt": [
+          1,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          1,
+          0
+        ]
+      }
+    },
+    "cord_test_003": {
+      "tp": 7,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          1,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_004": {
+      "tp": 12,
+      "fp": 2,
+      "fn": 2,
+      "f1": 0.8571,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          0,
+          1,
+          1
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          1,
+          0,
+          0
+        ],
+        "menu.nm": [
+          2,
+          1,
+          1
+        ],
+        "menu.cnt": [
+          3,
+          0,
+          0
+        ],
+        "menu.price": [
+          3,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_005": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 1,
+      "f1": 0.9231,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          1
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          0,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_006": {
+      "tp": 11,
+      "fp": 1,
+      "fn": 1,
+      "f1": 0.9167,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          2,
+          1,
+          1
+        ],
+        "menu.cnt": [
+          3,
+          0,
+          0
+        ],
+        "menu.price": [
+          3,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_007": {
+      "tp": 6,
+      "fp": 2,
+      "fn": 0,
+      "f1": 0.8571,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          1,
+          0
+        ],
+        "menu.cnt": [
+          0,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          1,
+          0
+        ]
+      }
+    },
+    "cord_test_008": {
+      "tp": 7,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          1,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          1,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_009": {
+      "tp": 5,
+      "fp": 1,
+      "fn": 0,
+      "f1": 0.9091,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          0,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          0,
+          1,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_010": {
+      "tp": 7,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          1,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_011": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          1,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_012": {
+      "tp": 5,
+      "fp": 5,
+      "fn": 3,
+      "f1": 0.5556,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          1,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          1,
+          1
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          0,
+          2,
+          2
+        ],
+        "menu.cnt": [
+          2,
+          0,
+          0
+        ],
+        "menu.price": [
+          0,
+          2,
+          0
+        ]
+      }
+    },
+    "cord_test_013": {
+      "tp": 7,
+      "fp": 4,
+      "fn": 4,
+      "f1": 0.6364,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          0,
+          1,
+          1
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          1,
+          1
+        ],
+        "sub_total.tax_price": [
+          0,
+          1,
+          1
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          2,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          2,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cord_test_014": {
+      "tp": 22,
+      "fp": 1,
+      "fn": 1,
+      "f1": 0.9565,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          5,
+          1,
+          1
+        ],
+        "menu.cnt": [
+          6,
+          0,
+          0
+        ],
+        "menu.price": [
+          6,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_015": {
+      "tp": 9,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          2,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          2,
+          0,
+          0
+        ],
+        "menu.price": [
+          2,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_016": {
+      "tp": 8,
+      "fp": 9,
+      "fn": 3,
+      "f1": 0.5714,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          3,
+          1
+        ],
+        "menu.cnt": [
+          1,
+          3,
+          1
+        ],
+        "menu.price": [
+          1,
+          3,
+          1
+        ]
+      }
+    },
+    "cord_test_017": {
+      "tp": 15,
+      "fp": 4,
+      "fn": 7,
+      "f1": 0.7317,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          1,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          1,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          4,
+          5
+        ],
+        "menu.cnt": [
+          5,
+          0,
+          1
+        ],
+        "menu.price": [
+          5,
+          0,
+          1
+        ]
+      }
+    },
+    "cord_test_018": {
+      "tp": 5,
+      "fp": 1,
+      "fn": 1,
+      "f1": 0.8333,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          0,
+          0,
+          1
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          1,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          1,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_019": {
+      "tp": 7,
+      "fp": 2,
+      "fn": 2,
+      "f1": 0.7778,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          1,
+          1
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          2,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          2,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cord_test_020": {
+      "tp": 14,
+      "fp": 4,
+      "fn": 4,
+      "f1": 0.7778,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          5,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          5,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          4,
+          4
+        ]
+      }
+    },
+    "cord_test_021": {
+      "tp": 9,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          2,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          2,
+          0,
+          0
+        ],
+        "menu.price": [
+          2,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_022": {
+      "tp": 9,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          2,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          2,
+          0,
+          0
+        ],
+        "menu.price": [
+          2,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_023": {
+      "tp": 9,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          2,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          2,
+          0,
+          0
+        ],
+        "menu.price": [
+          2,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_024": {
+      "tp": 12,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          1,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          3,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          3,
+          0,
+          0
+        ],
+        "menu.price": [
+          3,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_025": {
+      "tp": 12,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          3,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          3,
+          0,
+          0
+        ],
+        "menu.price": [
+          3,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_026": {
+      "tp": 8,
+      "fp": 8,
+      "fn": 4,
+      "f1": 0.5714,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          0,
+          4,
+          3
+        ],
+        "menu.cnt": [
+          2,
+          2,
+          1
+        ],
+        "menu.price": [
+          2,
+          2,
+          0
+        ]
+      }
+    },
+    "cord_test_027": {
+      "tp": 8,
+      "fp": 1,
+      "fn": 1,
+      "f1": 0.8889,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          0,
+          1
+        ],
+        "total.changeprice": [
+          0,
+          1,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          2,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          0,
+          0,
+          0
+        ],
+        "menu.price": [
+          2,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_028": {
+      "tp": 13,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          1,
+          0,
+          0
+        ],
+        "menu.nm": [
+          3,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          3,
+          0,
+          0
+        ],
+        "menu.price": [
+          3,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_029": {
+      "tp": 22,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          1,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          6,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          6,
+          0,
+          0
+        ],
+        "menu.price": [
+          6,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_030": {
+      "tp": 7,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          0,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_031": {
+      "tp": 9,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          2,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          2,
+          0,
+          0
+        ],
+        "menu.price": [
+          2,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_032": {
+      "tp": 7,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          1,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_033": {
+      "tp": 12,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          3,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          3,
+          0,
+          0
+        ],
+        "menu.price": [
+          3,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_034": {
+      "tp": 10,
+      "fp": 1,
+      "fn": 1,
+      "f1": 0.9091,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          2,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          2,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cord_test_035": {
+      "tp": 15,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          4,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          4,
+          0,
+          0
+        ],
+        "menu.price": [
+          4,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_036": {
+      "tp": 8,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          1,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_037": {
+      "tp": 5,
+      "fp": 1,
+      "fn": 0,
+      "f1": 0.9091,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          0,
+          1,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          1,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_038": {
+      "tp": 30,
+      "fp": 0,
+      "fn": 1,
+      "f1": 0.9836,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          1
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          9,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          9,
+          0,
+          0
+        ],
+        "menu.price": [
+          9,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_039": {
+      "tp": 1,
+      "fp": 2,
+      "fn": 10,
+      "f1": 0.1429,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          0,
+          1,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          1
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          1
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          0,
+          1,
+          3
+        ],
+        "menu.cnt": [
+          0,
+          0,
+          3
+        ],
+        "menu.price": [
+          1,
+          0,
+          2
+        ]
+      }
+    },
+    "cord_test_040": {
+      "tp": 5,
+      "fp": 4,
+      "fn": 4,
+      "f1": 0.5556,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          0,
+          1,
+          1
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          1,
+          1
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          0,
+          2,
+          2
+        ],
+        "menu.cnt": [
+          2,
+          0,
+          0
+        ],
+        "menu.price": [
+          2,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_041": {
+      "tp": 18,
+      "fp": 5,
+      "fn": 4,
+      "f1": 0.8,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          1,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          8,
+          2,
+          2
+        ],
+        "menu.cnt": [
+          0,
+          0,
+          0
+        ],
+        "menu.price": [
+          8,
+          2,
+          2
+        ]
+      }
+    },
+    "cord_test_042": {
+      "tp": 8,
+      "fp": 1,
+      "fn": 1,
+      "f1": 0.8889,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          1,
+          1
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          1,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_043": {
+      "tp": 7,
+      "fp": 1,
+      "fn": 1,
+      "f1": 0.875,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          1,
+          1
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          1,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_044": {
+      "tp": 5,
+      "fp": 1,
+      "fn": 1,
+      "f1": 0.8333,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          1,
+          0,
+          0
+        ],
+        "menu.price": [
+          0,
+          1,
+          1
+        ]
+      }
+    },
+    "cord_test_045": {
+      "tp": 14,
+      "fp": 1,
+      "fn": 1,
+      "f1": 0.9333,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          0,
+          1,
+          1
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          4,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          4,
+          0,
+          0
+        ],
+        "menu.price": [
+          4,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_046": {
+      "tp": 9,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          2,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          2,
+          0,
+          0
+        ],
+        "menu.price": [
+          2,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_047": {
+      "tp": 10,
+      "fp": 2,
+      "fn": 3,
+      "f1": 0.8,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          1,
+          1
+        ],
+        "total.menuqty_cnt": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          1
+        ],
+        "menu.nm": [
+          2,
+          1,
+          1
+        ],
+        "menu.cnt": [
+          3,
+          0,
+          0
+        ],
+        "menu.price": [
+          3,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_048": {
+      "tp": 8,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          1,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_049": {
+      "tp": 11,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          2,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          2,
+          0,
+          0
+        ],
+        "menu.price": [
+          2,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_050": {
+      "tp": 7,
+      "fp": 1,
+      "fn": 1,
+      "f1": 0.875,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          0,
+          1,
+          1
+        ],
+        "menu.cnt": [
+          1,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_051": {
+      "tp": 11,
+      "fp": 6,
+      "fn": 6,
+      "f1": 0.6471,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          1,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          1,
+          1
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          3,
+          3
+        ],
+        "menu.cnt": [
+          3,
+          1,
+          1
+        ],
+        "menu.price": [
+          3,
+          1,
+          1
+        ]
+      }
+    },
+    "cord_test_052": {
+      "tp": 10,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          2,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          2,
+          0,
+          0
+        ],
+        "menu.price": [
+          2,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_053": {
+      "tp": 13,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          3,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          3,
+          0,
+          0
+        ],
+        "menu.price": [
+          3,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_054": {
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          0,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_055": {
+      "tp": 8,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          1,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          2,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          2,
+          0,
+          0
+        ],
+        "menu.price": [
+          2,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_056": {
+      "tp": 7,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          0,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_057": {
+      "tp": 3,
+      "fp": 1,
+      "fn": 2,
+      "f1": 0.6667,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          0,
+          1,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          1
+        ],
+        "menu.cnt": [
+          0,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    "cord_test_058": {
+      "tp": 4,
+      "fp": 4,
+      "fn": 4,
+      "f1": 0.5,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          1,
+          1
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          0,
+          1,
+          1
+        ],
+        "menu.cnt": [
+          0,
+          1,
+          1
+        ],
+        "menu.price": [
+          0,
+          1,
+          1
+        ]
+      }
+    },
+    "cord_test_059": {
+      "tp": 30,
+      "fp": 1,
+      "fn": 1,
+      "f1": 0.9677,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          1,
+          1
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          9,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          9,
+          0,
+          0
+        ],
+        "menu.price": [
+          9,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_060": {
+      "tp": 6,
+      "fp": 7,
+      "fn": 3,
+      "f1": 0.5455,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          1,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          1,
+          1
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          2,
+          1
+        ],
+        "menu.cnt": [
+          2,
+          1,
+          0
+        ],
+        "menu.price": [
+          1,
+          2,
+          1
+        ]
+      }
+    },
+    "cord_test_061": {
+      "tp": 22,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          1,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          6,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          6,
+          0,
+          0
+        ],
+        "menu.price": [
+          6,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_062": {
+      "tp": 8,
+      "fp": 1,
+      "fn": 1,
+      "f1": 0.8889,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          1,
+          1
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          2,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          2,
+          0,
+          0
+        ],
+        "menu.price": [
+          2,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_063": {
+      "tp": 7,
+      "fp": 0,
+      "fn": 3,
+      "f1": 0.8235,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          1
+        ],
+        "menu.cnt": [
+          1,
+          0,
+          1
+        ],
+        "menu.price": [
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    "cord_test_064": {
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          0,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_065": {
+      "tp": 1,
+      "fp": 2,
+      "fn": 5,
+      "f1": 0.2222,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          0,
+          0,
+          1
+        ],
+        "total.cashprice": [
+          0,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          1
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          1
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          0,
+          1,
+          1
+        ],
+        "menu.cnt": [
+          0,
+          1,
+          1
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_066": {
+      "tp": 9,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          2,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          0,
+          0,
+          0
+        ],
+        "menu.price": [
+          2,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_067": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          1,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_068": {
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          0,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_069": {
+      "tp": 12,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          3,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          3,
+          0,
+          0
+        ],
+        "menu.price": [
+          3,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_070": {
+      "tp": 26,
+      "fp": 1,
+      "fn": 5,
+      "f1": 0.8966,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          8,
+          0,
+          2
+        ],
+        "menu.cnt": [
+          8,
+          0,
+          2
+        ],
+        "menu.price": [
+          7,
+          1,
+          1
+        ]
+      }
+    },
+    "cord_test_071": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          1,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_072": {
+      "tp": 8,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          1,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_073": {
+      "tp": 10,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          2,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          2,
+          0,
+          0
+        ],
+        "menu.price": [
+          2,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_074": {
+      "tp": 15,
+      "fp": 3,
+      "fn": 0,
+      "f1": 0.9091,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          4,
+          2,
+          0
+        ],
+        "menu.cnt": [
+          4,
+          0,
+          0
+        ],
+        "menu.price": [
+          4,
+          1,
+          0
+        ]
+      }
+    },
+    "cord_test_075": {
+      "tp": 21,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          6,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          6,
+          0,
+          0
+        ],
+        "menu.price": [
+          6,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_076": {
+      "tp": 10,
+      "fp": 2,
+      "fn": 0,
+      "f1": 0.9091,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          0,
+          1,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          1,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          4,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          1,
+          0,
+          0
+        ],
+        "menu.price": [
+          4,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_077": {
+      "tp": 7,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          1,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_078": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          1,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_079": {
+      "tp": 9,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          2,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          2,
+          0,
+          0
+        ],
+        "menu.price": [
+          2,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_080": {
+      "tp": 6,
+      "fp": 1,
+      "fn": 1,
+      "f1": 0.8571,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          1,
+          0,
+          0
+        ],
+        "menu.price": [
+          0,
+          1,
+          1
+        ]
+      }
+    },
+    "cord_test_081": {
+      "tp": 11,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          3,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          3,
+          0,
+          0
+        ],
+        "menu.price": [
+          3,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_082": {
+      "tp": 13,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          1,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          3,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          3,
+          0,
+          0
+        ],
+        "menu.price": [
+          3,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_083": {
+      "tp": 6,
+      "fp": 3,
+      "fn": 3,
+      "f1": 0.6667,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          0,
+          1,
+          1
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          1,
+          1
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          1,
+          1
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          1,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_084": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 3,
+      "f1": 0.8,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          1
+        ],
+        "menu.cnt": [
+          1,
+          0,
+          1
+        ],
+        "menu.price": [
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    "cord_test_085": {
+      "tp": 36,
+      "fp": 3,
+      "fn": 2,
+      "f1": 0.9351,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          1,
+          1
+        ],
+        "total.changeprice": [
+          0,
+          1,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          1,
+          1
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          11,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          11,
+          0,
+          0
+        ],
+        "menu.price": [
+          11,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_086": {
+      "tp": 11,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          2,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          2,
+          0,
+          0
+        ],
+        "menu.price": [
+          2,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_087": {
+      "tp": 7,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          1,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          1,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_088": {
+      "tp": 9,
+      "fp": 0,
+      "fn": 1,
+      "f1": 0.9474,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          1
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          2,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          2,
+          0,
+          0
+        ],
+        "menu.price": [
+          2,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_089": {
+      "tp": 8,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          1,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_090": {
+      "tp": 8,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          1,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_091": {
+      "tp": 4,
+      "fp": 5,
+      "fn": 5,
+      "f1": 0.4444,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          0,
+          1,
+          1
+        ],
+        "total.cashprice": [
+          0,
+          1,
+          1
+        ],
+        "total.changeprice": [
+          0,
+          1,
+          1
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          2,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          2,
+          0,
+          0
+        ],
+        "menu.price": [
+          0,
+          2,
+          2
+        ]
+      }
+    },
+    "cord_test_092": {
+      "tp": 5,
+      "fp": 2,
+      "fn": 2,
+      "f1": 0.7143,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          1,
+          1
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          1,
+          1
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          1,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_093": {
+      "tp": 7,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "passed": true,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          1,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_094": {
+      "tp": 14,
+      "fp": 18,
+      "fn": 2,
+      "f1": 0.5833,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          1,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          3,
+          9,
+          1
+        ],
+        "menu.cnt": [
+          4,
+          0,
+          0
+        ],
+        "menu.price": [
+          3,
+          9,
+          1
+        ]
+      }
+    },
+    "cord_test_095": {
+      "tp": 7,
+      "fp": 4,
+      "fn": 3,
+      "f1": 0.6667,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          1,
+          1
+        ],
+        "total.changeprice": [
+          0,
+          1,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          1,
+          1
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          2,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          2,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cord_test_096": {
+      "tp": 7,
+      "fp": 1,
+      "fn": 0,
+      "f1": 0.9333,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          1,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          1,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_097": {
+      "tp": 10,
+      "fp": 1,
+      "fn": 1,
+      "f1": 0.9091,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          1,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          2,
+          1,
+          1
+        ],
+        "menu.cnt": [
+          2,
+          0,
+          0
+        ],
+        "menu.price": [
+          3,
+          0,
+          0
+        ]
+      }
+    },
+    "cord_test_098": {
+      "tp": 7,
+      "fp": 8,
+      "fn": 5,
+      "f1": 0.5185,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          0,
+          0
+        ],
+        "total.changeprice": [
+          0,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          0,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          0,
+          1,
+          1
+        ],
+        "sub_total.tax_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.discount_price": [
+          0,
+          0,
+          0
+        ],
+        "menu.nm": [
+          2,
+          3,
+          1
+        ],
+        "menu.cnt": [
+          2,
+          1,
+          1
+        ],
+        "menu.price": [
+          1,
+          3,
+          2
+        ]
+      }
+    },
+    "cord_test_099": {
+      "tp": 8,
+      "fp": 2,
+      "fn": 2,
+      "f1": 0.8,
+      "passed": false,
+      "fields": {
+        "total.total_price": [
+          1,
+          0,
+          0
+        ],
+        "total.cashprice": [
+          0,
+          1,
+          1
+        ],
+        "total.changeprice": [
+          1,
+          0,
+          0
+        ],
+        "total.creditcardprice": [
+          1,
+          0,
+          0
+        ],
+        "total.menuqty_cnt": [
+          0,
+          0,
+          0
+        ],
+        "sub_total.subtotal_price": [
+          1,
+          0,
+          0
+        ],
+        "sub_total.tax_price": [
+          0,
+          1,
+          1
+        ],
+        "sub_total.discount_price": [
+          1,
+          0,
+          0
+        ],
+        "menu.nm": [
+          1,
+          0,
+          0
+        ],
+        "menu.cnt": [
+          1,
+          0,
+          0
+        ],
+        "menu.price": [
+          1,
+          0,
+          0
+        ]
+      }
+    }
+  },
+  "errors": [
+    {
+      "doc": "cord_test_000",
+      "field": "total.creditcardprice",
+      "bucket": "missing",
+      "gold": "60.000",
+      "pred": null
+    },
+    {
+      "doc": "cord_test_000",
+      "field": "sub_total.subtotal_price",
+      "bucket": "format_only",
+      "gold": "60.000",
+      "pred": "-60.000"
+    },
+    {
+      "doc": "cord_test_000",
+      "field": "sub_total.tax_price",
+      "bucket": "format_only",
+      "gold": "5.455",
+      "pred": "5,455"
+    },
+    {
+      "doc": "cord_test_000",
+      "field": "sub_total.discount_price",
+      "bucket": "missing",
+      "gold": "-60.000",
+      "pred": null
+    },
+    {
+      "doc": "cord_test_002",
+      "field": "menu.nm",
+      "bucket": "mismatch",
+      "gold": "JASMINE MT ( L )",
+      "pred": "GOSMINE MT ( )",
+      "item": 0
+    },
+    {
+      "doc": "cord_test_002",
+      "field": "menu.nm",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "COCONUT JELLY ( L )",
+      "item": 1
+    },
+    {
+      "doc": "cord_test_002",
+      "field": "menu.price",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "4,000",
+      "item": 1
+    },
+    {
+      "doc": "cord_test_004",
+      "field": "total.total_price",
+      "bucket": "format_only",
+      "gold": "174,600",
+      "pred": "174.600"
+    },
+    {
+      "doc": "cord_test_004",
+      "field": "menu.nm",
+      "bucket": "mismatch",
+      "gold": "CHIKEN KATSU FF",
+      "pred": "Ode CHIKEN KATSU FF",
+      "item": 2
+    },
+    {
+      "doc": "cord_test_005",
+      "field": "total.menuqty_cnt",
+      "bucket": "missing",
+      "gold": "1.00",
+      "pred": null
+    },
+    {
+      "doc": "cord_test_006",
+      "field": "menu.nm",
+      "bucket": "mismatch",
+      "gold": "CHOCO CUS ARD PASTRY",
+      "pred": "CHOCO CUSTARD PASTRY",
+      "item": 1
+    },
+    {
+      "doc": "cord_test_007",
+      "field": "menu.nm",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "ADD CHICKEN BOX",
+      "item": 1
+    },
+    {
+      "doc": "cord_test_007",
+      "field": "menu.price",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "909",
+      "item": 1
+    },
+    {
+      "doc": "cord_test_009",
+      "field": "menu.cnt",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "1",
+      "item": 0
+    },
+    {
+      "doc": "cord_test_012",
+      "field": "total.menuqty_cnt",
+      "bucket": "mismatch",
+      "gold": "(2",
+      "pred": "1"
+    },
+    {
+      "doc": "cord_test_012",
+      "field": "menu.nm",
+      "bucket": "mismatch",
+      "gold": "BLUS WANITA",
+      "pred": "0571-1854 BLUS WANITA",
+      "item": 0
+    },
+    {
+      "doc": "cord_test_012",
+      "field": "menu.price",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "120,000",
+      "item": 0
+    },
+    {
+      "doc": "cord_test_012",
+      "field": "menu.nm",
+      "bucket": "mismatch",
+      "gold": "SHOPPING BAG",
+      "pred": "1002-0060 SHOPPING BAG",
+      "item": 1
+    },
+    {
+      "doc": "cord_test_012",
+      "field": "menu.price",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "0",
+      "item": 1
+    },
+    {
+      "doc": "cord_test_013",
+      "field": "total.total_price",
+      "bucket": "format_only",
+      "gold": "51.300",
+      "pred": "51,300"
+    },
+    {
+      "doc": "cord_test_013",
+      "field": "sub_total.subtotal_price",
+      "bucket": "mismatch",
+      "gold": [
+        "46.636",
+        "46.636"
+      ],
+      "pred": "46.636"
+    },
+    {
+      "doc": "cord_test_013",
+      "field": "sub_total.tax_price",
+      "bucket": "format_only",
+      "gold": "4.664",
+      "pred": "4,664"
+    },
+    {
+      "doc": "cord_test_013",
+      "field": "menu.price",
+      "bucket": "format_only",
+      "gold": "3,000",
+      "pred": "3.000",
+      "item": 1
+    },
+    {
+      "doc": "cord_test_014",
+      "field": "menu.nm",
+      "bucket": "mismatch",
+      "gold": "Chamomile",
+      "pred": "Chamoville",
+      "item": 4
+    },
+    {
+      "doc": "cord_test_016",
+      "field": "menu.nm",
+      "bucket": "missing",
+      "gold": "[LG] BLACK SAKURA",
+      "pred": null,
+      "item": 0
+    },
+    {
+      "doc": "cord_test_016",
+      "field": "menu.cnt",
+      "bucket": "missing",
+      "gold": "1",
+      "pred": null,
+      "item": 0
+    },
+    {
+      "doc": "cord_test_016",
+      "field": "menu.price",
+      "bucket": "missing",
+      "gold": "59,091",
+      "pred": null,
+      "item": 0
+    },
+    {
+      "doc": "cord_test_016",
+      "field": "menu.nm",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "LONGAN",
+      "item": 0
+    },
+    {
+      "doc": "cord_test_016",
+      "field": "menu.cnt",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "1",
+      "item": 0
+    },
+    {
+      "doc": "cord_test_016",
+      "field": "menu.price",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "0",
+      "item": 0
+    },
+    {
+      "doc": "cord_test_016",
+      "field": "menu.nm",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "ROASTED ALMOND",
+      "item": 1
+    },
+    {
+      "doc": "cord_test_016",
+      "field": "menu.cnt",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "1",
+      "item": 1
+    },
+    {
+      "doc": "cord_test_016",
+      "field": "menu.price",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "0",
+      "item": 1
+    },
+    {
+      "doc": "cord_test_016",
+      "field": "menu.nm",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "NANGGO",
+      "item": 2
+    },
+    {
+      "doc": "cord_test_016",
+      "field": "menu.cnt",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "1",
+      "item": 2
+    },
+    {
+      "doc": "cord_test_016",
+      "field": "menu.price",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "0",
+      "item": 2
+    },
+    {
+      "doc": "cord_test_017",
+      "field": "menu.nm",
+      "bucket": "mismatch",
+      "gold": "Chili Pepper Croquette",
+      "pred": "Croquette",
+      "item": 2
+    },
+    {
+      "doc": "cord_test_017",
+      "field": "menu.nm",
+      "bucket": "mismatch",
+      "gold": "Cheese Croquette",
+      "pred": "Cheese",
+      "item": 3
+    },
+    {
+      "doc": "cord_test_017",
+      "field": "menu.nm",
+      "bucket": "mismatch",
+      "gold": "Plastik Amook",
+      "pred": "Croquette",
+      "item": 4
+    },
+    {
+      "doc": "cord_test_017",
+      "field": "menu.nm",
+      "bucket": "mismatch",
+      "gold": "Plastik Putih Take Away",
+      "pred": "Take Away",
+      "item": 5
+    },
+    {
+      "doc": "cord_test_017",
+      "field": "menu.nm",
+      "bucket": "missing",
+      "gold": "Mozarella Hot Dog",
+      "pred": null,
+      "item": 1
+    },
+    {
+      "doc": "cord_test_017",
+      "field": "menu.cnt",
+      "bucket": "missing",
+      "gold": "2",
+      "pred": null,
+      "item": 1
+    },
+    {
+      "doc": "cord_test_017",
+      "field": "menu.price",
+      "bucket": "missing",
+      "gold": "38,000",
+      "pred": null,
+      "item": 1
+    },
+    {
+      "doc": "cord_test_018",
+      "field": "total.total_price",
+      "bucket": "missing",
+      "gold": "156000",
+      "pred": null
+    },
+    {
+      "doc": "cord_test_018",
+      "field": "sub_total.subtotal_price",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "156000"
+    },
+    {
+      "doc": "cord_test_019",
+      "field": "sub_total.subtotal_price",
+      "bucket": "mismatch",
+      "gold": "160000",
+      "pred": "100000"
+    },
+    {
+      "doc": "cord_test_019",
+      "field": "menu.price",
+      "bucket": "mismatch",
+      "gold": "100000",
+      "pred": "10000",
+      "item": 1
+    },
+    {
+      "doc": "cord_test_020",
+      "field": "menu.price",
+      "bucket": "format_only",
+      "gold": "64,500",
+      "pred": "64.500",
+      "item": 0
+    },
+    {
+      "doc": "cord_test_020",
+      "field": "menu.price",
+      "bucket": "format_only",
+      "gold": "79,500",
+      "pred": "79.500",
+      "item": 1
+    },
+    {
+      "doc": "cord_test_020",
+      "field": "menu.price",
+      "bucket": "format_only",
+      "gold": "69,500",
+      "pred": "69.500",
+      "item": 2
+    },
+    {
+      "doc": "cord_test_020",
+      "field": "menu.price",
+      "bucket": "format_only",
+      "gold": "64,500",
+      "pred": "64.500",
+      "item": 3
+    },
+    {
+      "doc": "cord_test_026",
+      "field": "menu.nm",
+      "bucket": "mismatch",
+      "gold": "Nasi Cap Cay Porsi B esar",
+      "pred": "Cap Cay",
+      "item": 0
+    },
+    {
+      "doc": "cord_test_026",
+      "field": "menu.nm",
+      "bucket": "mismatch",
+      "gold": "Fu Yung Hai",
+      "pred": "Lain-lain",
+      "item": 2
+    },
+    {
+      "doc": "cord_test_026",
+      "field": "menu.nm",
+      "bucket": "missing",
+      "gold": "Teh Tawar",
+      "pred": null,
+      "item": 1
+    },
+    {
+      "doc": "cord_test_026",
+      "field": "menu.cnt",
+      "bucket": "missing",
+      "gold": "2",
+      "pred": null,
+      "item": 1
+    },
+    {
+      "doc": "cord_test_026",
+      "field": "menu.nm",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "esar",
+      "item": 1
+    },
+    {
+      "doc": "cord_test_026",
+      "field": "menu.cnt",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "1",
+      "item": 1
+    },
+    {
+      "doc": "cord_test_026",
+      "field": "menu.price",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "65.000",
+      "item": 1
+    },
+    {
+      "doc": "cord_test_026",
+      "field": "menu.nm",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "Minuman",
+      "item": 2
+    },
+    {
+      "doc": "cord_test_026",
+      "field": "menu.cnt",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "2",
+      "item": 2
+    },
+    {
+      "doc": "cord_test_026",
+      "field": "menu.price",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "0.000",
+      "item": 2
+    },
+    {
+      "doc": "cord_test_027",
+      "field": "total.cashprice",
+      "bucket": "missing",
+      "gold": "61,600",
+      "pred": null
+    },
+    {
+      "doc": "cord_test_027",
+      "field": "total.changeprice",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "61,600"
+    },
+    {
+      "doc": "cord_test_034",
+      "field": "menu.price",
+      "bucket": "format_only",
+      "gold": "10.000",
+      "pred": "10,000",
+      "item": 1
+    },
+    {
+      "doc": "cord_test_037",
+      "field": "total.total_price",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "20.000"
+    },
+    {
+      "doc": "cord_test_038",
+      "field": "total.menuqty_cnt",
+      "bucket": "missing",
+      "gold": "13",
+      "pred": null
+    },
+    {
+      "doc": "cord_test_039",
+      "field": "total.total_price",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "1555.200"
+    },
+    {
+      "doc": "cord_test_039",
+      "field": "total.creditcardprice",
+      "bucket": "missing",
+      "gold": "3,112,800",
+      "pred": null
+    },
+    {
+      "doc": "cord_test_039",
+      "field": "total.menuqty_cnt",
+      "bucket": "missing",
+      "gold": "17",
+      "pred": null
+    },
+    {
+      "doc": "cord_test_039",
+      "field": "menu.nm",
+      "bucket": "mismatch",
+      "gold": "LUNCH BOX 3P SET W/RED BAG & SP00 N.",
+      "pred": "SET WARED BAG 3 SPOO",
+      "item": 0
+    },
+    {
+      "doc": "cord_test_039",
+      "field": "menu.cnt",
+      "bucket": "missing",
+      "gold": "8",
+      "pred": null,
+      "item": 0
+    },
+    {
+      "doc": "cord_test_039",
+      "field": "menu.nm",
+      "bucket": "missing",
+      "gold": "RICE CASE 7L W/CUP",
+      "pred": null,
+      "item": 1
+    },
+    {
+      "doc": "cord_test_039",
+      "field": "menu.cnt",
+      "bucket": "missing",
+      "gold": "5",
+      "pred": null,
+      "item": 1
+    },
+    {
+      "doc": "cord_test_039",
+      "field": "menu.price",
+      "bucket": "missing",
+      "gold": "975,000",
+      "pred": null,
+      "item": 1
+    },
+    {
+      "doc": "cord_test_039",
+      "field": "menu.nm",
+      "bucket": "missing",
+      "gold": "LUNCH BOX 3P SET W/BLACK BAG & SP OON",
+      "pred": null,
+      "item": 2
+    },
+    {
+      "doc": "cord_test_039",
+      "field": "menu.cnt",
+      "bucket": "missing",
+      "gold": "4",
+      "pred": null,
+      "item": 2
+    },
+    {
+      "doc": "cord_test_039",
+      "field": "menu.price",
+      "bucket": "missing",
+      "gold": "972,000",
+      "pred": null,
+      "item": 2
+    },
+    {
+      "doc": "cord_test_040",
+      "field": "total.total_price",
+      "bucket": "format_only",
+      "gold": "68,000",
+      "pred": "68.000"
+    },
+    {
+      "doc": "cord_test_040",
+      "field": "total.changeprice",
+      "bucket": "format_only",
+      "gold": "32,000",
+      "pred": "32.000"
+    },
+    {
+      "doc": "cord_test_040",
+      "field": "menu.nm",
+      "bucket": "mismatch",
+      "gold": "Snack Lestari All",
+      "pred": "Shack Lestari A11",
+      "item": 0
+    },
+    {
+      "doc": "cord_test_040",
+      "field": "menu.nm",
+      "bucket": "mismatch",
+      "gold": "Bakery Aneka Sisir Banana,Pizza,yoko,Mar mer,Daging,abon,keju,cokelat,dll",
+      "pred": "Bakery Aneka Sisir banana. Pizza,yoko,Mar",
+      "item": 1
+    },
+    {
+      "doc": "cord_test_041",
+      "field": "sub_total.tax_price",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "365000.00"
+    },
+    {
+      "doc": "cord_test_041",
+      "field": "menu.nm",
+      "bucket": "mismatch",
+      "gold": "Lychee/Peach/Lemon/Mango",
+      "pred": "Lychee/Beach/Lemon/ Mango",
+      "item": 8
+    },
+    {
+      "doc": "cord_test_041",
+      "field": "menu.price",
+      "bucket": "mismatch",
+      "gold": "25974.00",
+      "pred": "25,74.00",
+      "item": 8
+    },
+    {
+      "doc": "cord_test_041",
+      "field": "menu.nm",
+      "bucket": "mismatch",
+      "gold": "Chicken Maryland",
+      "pred": "Chicken Mary land",
+      "item": 9
+    },
+    {
+      "doc": "cord_test_041",
+      "field": "menu.price",
+      "bucket": "format_only",
+      "gold": "47619.00",
+      "pred": "47619.000",
+      "item": 9
+    },
+    {
+      "doc": "cord_test_042",
+      "field": "sub_total.tax_price",
+      "bucket": "format_only",
+      "gold": "1,500",
+      "pred": "1.500"
+    },
+    {
+      "doc": "cord_test_043",
+      "field": "total.cashprice",
+      "bucket": "format_only",
+      "gold": "Rp 200000.00",
+      "pred": "Rp 200000"
+    },
+    {
+      "doc": "cord_test_044",
+      "field": "menu.price",
+      "bucket": "format_only",
+      "gold": "30.000",
+      "pred": "30,000",
+      "item": 0
+    },
+    {
+      "doc": "cord_test_045",
+      "field": "total.total_price",
+      "bucket": "format_only",
+      "gold": "88,000",
+      "pred": "88.000"
+    },
+    {
+      "doc": "cord_test_047",
+      "field": "total.creditcardprice",
+      "bucket": "mismatch",
+      "gold": "63,000.00",
+      "pred": "0.00"
+    },
+    {
+      "doc": "cord_test_047",
+      "field": "sub_total.discount_price",
+      "bucket": "missing",
+      "gold": "0.00",
+      "pred": null
+    },
+    {
+      "doc": "cord_test_047",
+      "field": "menu.nm",
+      "bucket": "mismatch",
+      "gold": "COPIA 1 /GB",
+      "pred": "910054260074",
+      "item": 2
+    },
+    {
+      "doc": "cord_test_050",
+      "field": "menu.nm",
+      "bucket": "mismatch",
+      "gold": "Superice Cauburry",
+      "pred": "SpcPrice Caudburry",
+      "item": 0
+    },
+    {
+      "doc": "cord_test_051",
+      "field": "total.menuqty_cnt",
+      "bucket": "mismatch",
+      "gold": "8",
+      "pred": "1"
+    },
+    {
+      "doc": "cord_test_051",
+      "field": "menu.nm",
+      "bucket": "mismatch",
+      "gold": "(TA) KWETIAW SEAFOOD SIRAM",
+      "pred": "(TA) KWETIAW SEAFOOD",
+      "item": 2
+    },
+    {
+      "doc": "cord_test_051",
+      "field": "menu.nm",
+      "bucket": "mismatch",
+      "gold": "(TA) NASI GORENG",
+      "pred": "SIRAM",
+      "item": 3
+    },
+    {
+      "doc": "cord_test_051",
+      "field": "menu.nm",
+      "bucket": "missing",
+      "gold": "(TA) NASI GRG TERI MEDAN",
+      "pred": null,
+      "item": 0
+    },
+    {
+      "doc": "cord_test_051",
+      "field": "menu.cnt",
+      "bucket": "missing",
+      "gold": "4",
+      "pred": null,
+      "item": 0
+    },
+    {
+      "doc": "cord_test_051",
+      "field": "menu.price",
+      "bucket": "missing",
+      "gold": "165,460",
+      "pred": null,
+      "item": 0
+    },
+    {
+      "doc": "cord_test_051",
+      "field": "menu.nm",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "tral: Ciston",
+      "item": 0
+    },
+    {
+      "doc": "cord_test_051",
+      "field": "menu.cnt",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "4",
+      "item": 0
+    },
+    {
+      "doc": "cord_test_051",
+      "field": "menu.price",
+      "bucket": "extra",
+      "gold": null,
+      "pred": {
+        "unitprice": "40,456",
+        "cnt": "1"
+      },
+      "item": 0
+    },
+    {
+      "doc": "cord_test_057",
+      "field": "total.total_price",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "22,000"
+    },
+    {
+      "doc": "cord_test_057",
+      "field": "menu.nm",
+      "bucket": "missing",
+      "gold": "ICED GT",
+      "pred": null,
+      "item": 1
+    },
+    {
+      "doc": "cord_test_057",
+      "field": "menu.price",
+      "bucket": "missing",
+      "gold": "22,000",
+      "pred": null,
+      "item": 1
+    },
+    {
+      "doc": "cord_test_058",
+      "field": "total.cashprice",
+      "bucket": "mismatch",
+      "gold": [
+        "100,000",
+        "100,000"
+      ],
+      "pred": "100,000"
+    },
+    {
+      "doc": "cord_test_058",
+      "field": "menu.nm",
+      "bucket": "missing",
+      "gold": "PHO BO TAI",
+      "pred": null,
+      "item": 0
+    },
+    {
+      "doc": "cord_test_058",
+      "field": "menu.cnt",
+      "bucket": "missing",
+      "gold": "1",
+      "pred": null,
+      "item": 0
+    },
+    {
+      "doc": "cord_test_058",
+      "field": "menu.price",
+      "bucket": "missing",
+      "gold": "55,000",
+      "pred": null,
+      "item": 0
+    },
+    {
+      "doc": "cord_test_058",
+      "field": "menu.nm",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "CASH",
+      "item": 0
+    },
+    {
+      "doc": "cord_test_058",
+      "field": "menu.cnt",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "1",
+      "item": 0
+    },
+    {
+      "doc": "cord_test_058",
+      "field": "menu.price",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "100,000",
+      "item": 0
+    },
+    {
+      "doc": "cord_test_059",
+      "field": "total.menuqty_cnt",
+      "bucket": "mismatch",
+      "gold": "21",
+      "pred": "3"
+    },
+    {
+      "doc": "cord_test_060",
+      "field": "total.cashprice",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "GO-PAY"
+    },
+    {
+      "doc": "cord_test_060",
+      "field": "sub_total.tax_price",
+      "bucket": "mismatch",
+      "gold": "-",
+      "pred": "26.250"
+    },
+    {
+      "doc": "cord_test_060",
+      "field": "menu.nm",
+      "bucket": "mismatch",
+      "gold": "Topping Milo Sparkle (untuk 1 Po rsi)",
+      "pred": "Topping Milo Sparkle (untuk",
+      "item": 0
+    },
+    {
+      "doc": "cord_test_060",
+      "field": "menu.price",
+      "bucket": "mismatch",
+      "gold": "1.250",
+      "pred": "1 Po",
+      "item": 0
+    },
+    {
+      "doc": "cord_test_060",
+      "field": "menu.nm",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "rsi)",
+      "item": 1
+    },
+    {
+      "doc": "cord_test_060",
+      "field": "menu.cnt",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "1x",
+      "item": 1
+    },
+    {
+      "doc": "cord_test_060",
+      "field": "menu.price",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "1.250",
+      "item": 1
+    },
+    {
+      "doc": "cord_test_062",
+      "field": "total.changeprice",
+      "bucket": "format_only",
+      "gold": "2,000",
+      "pred": "2.000"
+    },
+    {
+      "doc": "cord_test_063",
+      "field": "menu.nm",
+      "bucket": "missing",
+      "gold": "Kopi Susu Kampung.",
+      "pred": null,
+      "item": 1
+    },
+    {
+      "doc": "cord_test_063",
+      "field": "menu.cnt",
+      "bucket": "missing",
+      "gold": "x2",
+      "pred": null,
+      "item": 1
+    },
+    {
+      "doc": "cord_test_063",
+      "field": "menu.price",
+      "bucket": "missing",
+      "gold": "38.000",
+      "pred": null,
+      "item": 1
+    },
+    {
+      "doc": "cord_test_065",
+      "field": "total.total_price",
+      "bucket": "missing",
+      "gold": "13.000",
+      "pred": null
+    },
+    {
+      "doc": "cord_test_065",
+      "field": "sub_total.subtotal_price",
+      "bucket": "missing",
+      "gold": "13.000",
+      "pred": null
+    },
+    {
+      "doc": "cord_test_065",
+      "field": "sub_total.tax_price",
+      "bucket": "missing",
+      "gold": "-",
+      "pred": null
+    },
+    {
+      "doc": "cord_test_065",
+      "field": "menu.nm",
+      "bucket": "mismatch",
+      "gold": "Bubur Polos + Telur",
+      "pred": "ubur Polos + Telur",
+      "item": 0
+    },
+    {
+      "doc": "cord_test_065",
+      "field": "menu.cnt",
+      "bucket": "mismatch",
+      "gold": "1",
+      "pred": "3x",
+      "item": 0
+    },
+    {
+      "doc": "cord_test_070",
+      "field": "menu.price",
+      "bucket": "format_only",
+      "gold": "222.000",
+      "pred": "222,000",
+      "item": 4
+    },
+    {
+      "doc": "cord_test_070",
+      "field": "menu.nm",
+      "bucket": "missing",
+      "gold": "=*LARGE*==",
+      "pred": null,
+      "item": 1
+    },
+    {
+      "doc": "cord_test_070",
+      "field": "menu.cnt",
+      "bucket": "missing",
+      "gold": "2",
+      "pred": null,
+      "item": 1
+    },
+    {
+      "doc": "cord_test_070",
+      "field": "menu.nm",
+      "bucket": "missing",
+      "gold": "=*MEDIUM*=",
+      "pred": null,
+      "item": 5
+    },
+    {
+      "doc": "cord_test_070",
+      "field": "menu.cnt",
+      "bucket": "missing",
+      "gold": "2",
+      "pred": null,
+      "item": 5
+    },
+    {
+      "doc": "cord_test_074",
+      "field": "menu.nm",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "BEVERAGE",
+      "item": 2
+    },
+    {
+      "doc": "cord_test_074",
+      "field": "menu.price",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "64,000",
+      "item": 2
+    },
+    {
+      "doc": "cord_test_074",
+      "field": "menu.nm",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "* NEW YORK FISH & CHIPS",
+      "item": 5
+    },
+    {
+      "doc": "cord_test_076",
+      "field": "total.total_price",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "5Q -"
+    },
+    {
+      "doc": "cord_test_076",
+      "field": "total.menuqty_cnt",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "5Q -"
+    },
+    {
+      "doc": "cord_test_080",
+      "field": "menu.price",
+      "bucket": "format_only",
+      "gold": "25,000",
+      "pred": "25.000",
+      "item": 0
+    },
+    {
+      "doc": "cord_test_083",
+      "field": "total.total_price",
+      "bucket": "format_only",
+      "gold": "23,000",
+      "pred": "23.000"
+    },
+    {
+      "doc": "cord_test_083",
+      "field": "total.changeprice",
+      "bucket": "format_only",
+      "gold": "2.000",
+      "pred": "2,000"
+    },
+    {
+      "doc": "cord_test_083",
+      "field": "sub_total.subtotal_price",
+      "bucket": "format_only",
+      "gold": "20,909",
+      "pred": "20.909"
+    },
+    {
+      "doc": "cord_test_084",
+      "field": "menu.nm",
+      "bucket": "missing",
+      "gold": "Kroket",
+      "pred": null,
+      "item": 0
+    },
+    {
+      "doc": "cord_test_084",
+      "field": "menu.cnt",
+      "bucket": "missing",
+      "gold": "1x",
+      "pred": null,
+      "item": 0
+    },
+    {
+      "doc": "cord_test_084",
+      "field": "menu.price",
+      "bucket": "missing",
+      "gold": "12.000",
+      "pred": null,
+      "item": 0
+    },
+    {
+      "doc": "cord_test_085",
+      "field": "total.cashprice",
+      "bucket": "mismatch",
+      "gold": "197.450",
+      "pred": "159.500"
+    },
+    {
+      "doc": "cord_test_085",
+      "field": "total.changeprice",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "20.000"
+    },
+    {
+      "doc": "cord_test_085",
+      "field": "total.menuqty_cnt",
+      "bucket": "mismatch",
+      "gold": "14",
+      "pred": "197.450"
+    },
+    {
+      "doc": "cord_test_088",
+      "field": "total.creditcardprice",
+      "bucket": "missing",
+      "gold": "47,000",
+      "pred": null
+    },
+    {
+      "doc": "cord_test_091",
+      "field": "total.total_price",
+      "bucket": "format_only",
+      "gold": "21.000",
+      "pred": "21,000"
+    },
+    {
+      "doc": "cord_test_091",
+      "field": "total.cashprice",
+      "bucket": "format_only",
+      "gold": "30.000",
+      "pred": "30,000"
+    },
+    {
+      "doc": "cord_test_091",
+      "field": "total.changeprice",
+      "bucket": "format_only",
+      "gold": "9.000",
+      "pred": "9,000"
+    },
+    {
+      "doc": "cord_test_091",
+      "field": "menu.price",
+      "bucket": "format_only",
+      "gold": "15.000",
+      "pred": "15,000",
+      "item": 0
+    },
+    {
+      "doc": "cord_test_091",
+      "field": "menu.price",
+      "bucket": "format_only",
+      "gold": "6.000",
+      "pred": "6,000",
+      "item": 1
+    },
+    {
+      "doc": "cord_test_092",
+      "field": "total.changeprice",
+      "bucket": "format_only",
+      "gold": "10,000",
+      "pred": "10.000"
+    },
+    {
+      "doc": "cord_test_092",
+      "field": "total.menuqty_cnt",
+      "bucket": "mismatch",
+      "gold": "(Qty=4.00)",
+      "pred": "4"
+    },
+    {
+      "doc": "cord_test_094",
+      "field": "menu.nm",
+      "bucket": "mismatch",
+      "gold": "TAHU GORENG",
+      "pred": "T T AHU GORENG",
+      "item": 0
+    },
+    {
+      "doc": "cord_test_094",
+      "field": "menu.price",
+      "bucket": "mismatch",
+      "gold": "28,000",
+      "pred": "O",
+      "item": 0
+    },
+    {
+      "doc": "cord_test_094",
+      "field": "menu.nm",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "N",
+      "item": 0
+    },
+    {
+      "doc": "cord_test_094",
+      "field": "menu.price",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "O",
+      "item": 0
+    },
+    {
+      "doc": "cord_test_094",
+      "field": "menu.nm",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "N",
+      "item": 1
+    },
+    {
+      "doc": "cord_test_094",
+      "field": "menu.price",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "O",
+      "item": 1
+    },
+    {
+      "doc": "cord_test_094",
+      "field": "menu.nm",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "E T T E",
+      "item": 2
+    },
+    {
+      "doc": "cord_test_094",
+      "field": "menu.price",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "O",
+      "item": 2
+    },
+    {
+      "doc": "cord_test_094",
+      "field": "menu.nm",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "N",
+      "item": 3
+    },
+    {
+      "doc": "cord_test_094",
+      "field": "menu.price",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "O",
+      "item": 3
+    },
+    {
+      "doc": "cord_test_094",
+      "field": "menu.nm",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "E T E T E T E P",
+      "item": 4
+    },
+    {
+      "doc": "cord_test_094",
+      "field": "menu.price",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "O",
+      "item": 4
+    },
+    {
+      "doc": "cord_test_094",
+      "field": "menu.nm",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "E S",
+      "item": 5
+    },
+    {
+      "doc": "cord_test_094",
+      "field": "menu.price",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "O",
+      "item": 5
+    },
+    {
+      "doc": "cord_test_094",
+      "field": "menu.nm",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "E M A",
+      "item": 6
+    },
+    {
+      "doc": "cord_test_094",
+      "field": "menu.price",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "O",
+      "item": 6
+    },
+    {
+      "doc": "cord_test_094",
+      "field": "menu.nm",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "N",
+      "item": 7
+    },
+    {
+      "doc": "cord_test_094",
+      "field": "menu.price",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "O",
+      "item": 7
+    },
+    {
+      "doc": "cord_test_095",
+      "field": "total.cashprice",
+      "bucket": "mismatch",
+      "gold": [
+        "62,000",
+        "201"
+      ],
+      "pred": "62,000"
+    },
+    {
+      "doc": "cord_test_095",
+      "field": "total.changeprice",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "201"
+    },
+    {
+      "doc": "cord_test_095",
+      "field": "sub_total.subtotal_price",
+      "bucket": "format_only",
+      "gold": "56,181",
+      "pred": "56,181-"
+    },
+    {
+      "doc": "cord_test_095",
+      "field": "menu.price",
+      "bucket": "format_only",
+      "gold": "43,181",
+      "pred": "43,181-",
+      "item": 0
+    },
+    {
+      "doc": "cord_test_096",
+      "field": "total.menuqty_cnt",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "1"
+    },
+    {
+      "doc": "cord_test_097",
+      "field": "menu.nm",
+      "bucket": "mismatch",
+      "gold": "SATE ATI GO",
+      "pred": "SATEcATIzGO",
+      "item": 2
+    },
+    {
+      "doc": "cord_test_098",
+      "field": "sub_total.subtotal_price",
+      "bucket": "mismatch",
+      "gold": "215,000",
+      "pred": "255,000"
+    },
+    {
+      "doc": "cord_test_098",
+      "field": "menu.nm",
+      "bucket": "mismatch",
+      "gold": "BLACK PAPPER MEATBALL PAS",
+      "pred": "Presentat Taste/Ra. BEVERAC",
+      "item": 0
+    },
+    {
+      "doc": "cord_test_098",
+      "field": "menu.cnt",
+      "bucket": "missing",
+      "gold": "1",
+      "pred": null,
+      "item": 0
+    },
+    {
+      "doc": "cord_test_098",
+      "field": "menu.price",
+      "bucket": "mismatch",
+      "gold": "77,000",
+      "pred": "59,000",
+      "item": 1
+    },
+    {
+      "doc": "cord_test_098",
+      "field": "menu.price",
+      "bucket": "mismatch",
+      "gold": "59,000",
+      "pred": "255,000",
+      "item": 2
+    },
+    {
+      "doc": "cord_test_098",
+      "field": "menu.nm",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "FOOD Quality/K",
+      "item": 0
+    },
+    {
+      "doc": "cord_test_098",
+      "field": "menu.nm",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "BLACK PEPPER MEATBALL PAS",
+      "item": 2
+    },
+    {
+      "doc": "cord_test_098",
+      "field": "menu.cnt",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "1",
+      "item": 2
+    },
+    {
+      "doc": "cord_test_098",
+      "field": "menu.price",
+      "bucket": "extra",
+      "gold": null,
+      "pred": "77,000",
+      "item": 2
+    },
+    {
+      "doc": "cord_test_099",
+      "field": "total.cashprice",
+      "bucket": "mismatch",
+      "gold": "0",
+      "pred": "75,000"
+    },
+    {
+      "doc": "cord_test_099",
+      "field": "sub_total.tax_price",
+      "bucket": "mismatch",
+      "gold": [
+        "6,818",
+        "0"
+      ],
+      "pred": "6,818"
+    }
+  ],
+  "n_missing_predictions": 0,
+  "n_extra_predictions": 0
+}

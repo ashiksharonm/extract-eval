@@ -1,0 +1,91 @@
+{
+  "n_docs_compared": 100,
+  "micro_f1": {
+    "a": 0.7256,
+    "b": 0.8763,
+    "delta": 0.1507,
+    "delta_ci95": [
+      0.0778,
+      0.2337
+    ]
+  },
+  "macro_f1": {
+    "a": 0.71,
+    "b": 0.8586,
+    "delta": 0.1486,
+    "delta_ci95": [
+      0.08,
+      0.2288
+    ]
+  },
+  "pass_rate": {
+    "a": 0.44,
+    "b": 0.47,
+    "delta": 0.03
+  },
+  "fields": {
+    "menu.cnt": {
+      "a": 0.7363,
+      "b": 0.9428,
+      "delta": 0.2065
+    },
+    "menu.nm": {
+      "a": 0.6683,
+      "b": 0.832,
+      "delta": 0.1637
+    },
+    "menu.price": {
+      "a": 0.678,
+      "b": 0.8634,
+      "delta": 0.1854
+    },
+    "sub_total.discount_price": {
+      "a": 0.5,
+      "b": 0.8,
+      "delta": 0.3
+    },
+    "sub_total.subtotal_price": {
+      "a": 0.7434,
+      "b": 0.8923,
+      "delta": 0.1489
+    },
+    "sub_total.tax_price": {
+      "a": 0.6761,
+      "b": 0.8605,
+      "delta": 0.1844
+    },
+    "total.cashprice": {
+      "a": 0.8837,
+      "b": 0.8955,
+      "delta": 0.0118
+    },
+    "total.changeprice": {
+      "a": 0.8545,
+      "b": 0.887,
+      "delta": 0.0325
+    },
+    "total.creditcardprice": {
+      "a": 0.5217,
+      "b": 0.8276,
+      "delta": 0.3059
+    },
+    "total.menuqty_cnt": {
+      "a": 0.7547,
+      "b": 0.7368,
+      "delta": -0.0179
+    },
+    "total.total_price": {
+      "a": 0.7931,
+      "b": 0.9062,
+      "delta": 0.1131
+    }
+  },
+  "flips": {
+    "pass_to_fail": [],
+    "fail_to_pass": [
+      "cord_test_029",
+      "cord_test_061",
+      "cord_test_075"
+    ]
+  }
+}
