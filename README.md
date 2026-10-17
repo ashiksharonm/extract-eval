@@ -1,6 +1,54 @@
 # extract-eval
 
-Evaluate structured extraction (LLM, OCR, document-AI) against ground truth. Handles the parts that make extraction scoring fiddly: repeated line items that come back in a different order, numbers written as `"$1,234.50"` vs `1234.5`, dates in different styles, and the need for confidence intervals and run-to-run comparison instead of a single F1.
+[![CI](https://github.com/ashiksharonm/extract-eval/actions/workflows/ci.yml/badge.svg)](https://github.com/ashiksharonm/extract-eval/actions/workflows/ci.yml)
+
+**Did my extraction change make any field worse?** extract-eval scores structured extraction (LLM, OCR, document-AI) against ground truth, then gates pull requests on regressions: per-field F1 deltas with paired-bootstrap 95% confidence intervals, a markdown job summary, and a non-zero exit when a field significantly regressed. It also handles the fiddly parts of extraction scoring: line items returned in a different order (Hungarian matching), `"$1,234.50"` vs `1234.5`, and dates in different styles.
+
+```mermaid
+flowchart LR
+  gold[gold.jsonl] --> gate
+  base[baseline.jsonl] --> gate
+  cand[candidate.jsonl] --> gate
+  gate{{extract-eval compare}} --> md[job summary / PR comment]
+  gate --> code[exit 0 / 1]
+```
+
+## Regression gate (GitHub Action)
+
+```yaml
+# .github/workflows/extraction-gate.yml
+on: pull_request
+permissions: {contents: read, pull-requests: write}
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ashiksharonm/extract-eval@main   # pin a tag or SHA in real use
+        with:
+          gold: eval/gold.jsonl
+          config: eval/extract-eval.yaml
+          baseline: eval/baseline_preds.jsonl     # e.g. predictions committed from main
+          candidate: eval/candidate_preds.jsonl   # produced earlier in the job
+          comment-on-pr: "true"
+```
+
+Or locally / in any CI:
+
+```bash
+extract-eval compare baseline.jsonl candidate.jsonl --gold gold.jsonl --config cfg.yaml \
+    [--min-drop 0.01] [--significance ci|none] [--scope any|micro|fields] [--summary "$GITHUB_STEP_SUMMARY"]
+```
+
+A metric regresses when its F1 delta is negative, at least `--min-drop` in size, and (default) the 95% CI of the paired-bootstrap delta lies entirely below zero. Exit codes: 0 pass, 1 regression, 2 bad input. Per-field checks are not corrected for multiple comparisons; use `--min-drop` or `--scope micro` if that matters to you.
+
+Example on the committed CORD-v2 Donut runs below (100 docs, seed 0, 1000 resamples). Truncated to full decode passes (micro F1 +0.151, CI [0.078, 0.234], 3 docs fail to pass). The reverse direction exits 1 with 8 regressions: micro F1 0.876 to 0.726 (delta -0.151, CI [-0.234, -0.078]), plus `menu.nm`, `menu.cnt`, `menu.price`, `sub_total.subtotal_price`, `sub_total.tax_price`, `total.creditcardprice` and `total.total_price`. The repo's own [self-gate workflow](.github/workflows/self-gate.yml) runs both directions.
+
+## Demo
+
+A Gradio app ([`space/`](space)) scores uploaded gold/prediction JSONL and runs the gate. Run it locally with `docker compose up` (http://localhost:7860) or `pip install -e ".[demo]" && python space/app.py`. Hosted copy: deploy steps are in [docs/DESIGN.md](docs/DESIGN.md) and the `deploy-space` workflow; no Space is published yet.
+
+## Features
 
 - Field matchers: `exact`, `text` (normalized), `numeric` (tolerance, currency/thousands parsing, `us`/`eu`/`auto` locales), `date`, `fuzzy` (rapidfuzz).
 - Line items are aligned with the Hungarian algorithm (`scipy.optimize.linear_sum_assignment`) before per-field scoring; unmatched gold items count as FN, unmatched predicted items as FP.
@@ -30,7 +78,7 @@ Comparing item *i* with item *i* gets 0 of 6 values right on the same input. Ali
 ## Install
 
 ```bash
-pip install extract-eval        # once published; for now: pip install git+https://github.com/ashiksharonm/extract-eval
+pip install git+https://github.com/ashiksharonm/extract-eval   # not published to PyPI
 ```
 
 ## Quickstart
@@ -51,7 +99,7 @@ Records are JSONL, one document per line: `{"id": "r1", "data": {...}}`. A gold 
 ```bash
 extract-eval score --gold gold.jsonl --pred pred.jsonl --config cfg.yaml \
     --out out/report.json [--markdown out/report.md] [--fail-under 0.9] [--n-boot 1000] [--seed 0]
-extract-eval compare --a out/run_a.json --b out/run_b.json --out out/cmp.json
+extract-eval compare out/run_a.json out/run_b.json --out out/cmp.json   # report.json inputs need no --gold
 ```
 
 `score` writes `report.json` plus a markdown report and exits 1 if micro F1 is below `--fail-under`.
@@ -93,6 +141,7 @@ These numbers are not comparable to the field-level or tree-edit-distance scores
 
 ## Limitations
 
+- The gate compares runs on one gold set; it cannot detect distribution shift, and with a small gold set a real regression may not reach significance (use `--significance none` with a `--min-drop` floor).
 - Line-item alignment uses only the fields in `match_on`; items identical on those fields are interchangeable, so ties are broken arbitrarily.
 - Only scalar fields and one flat level of line items are scored; nested groups (e.g. CORD `sub` items) are ignored.
 - Dates without an explicit format are parsed from a fixed list of common formats, with `dayfirst` resolving ambiguity.
@@ -103,8 +152,8 @@ These numbers are not comparable to the field-level or tree-edit-distance scores
 ## Development
 
 ```bash
-uv venv --python 3.11 && uv pip install -e ".[dev]"
-ruff check . && pytest -q
+uv venv --python 3.11 && uv pip install -e ".[dev,demo]"
+ruff check . && mypy && pytest -q    # coverage gate: 85%
 ```
 
-MIT licensed.
+Design notes: [docs/DESIGN.md](docs/DESIGN.md). Changes: [CHANGELOG.md](CHANGELOG.md). MIT licensed.

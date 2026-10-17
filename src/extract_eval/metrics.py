@@ -122,10 +122,10 @@ def build_report(
     }
 
 
-def load_jsonl(path: str | Path) -> dict[str, dict[str, Any]]:
-    """Read records shaped ``{"id": ..., "data": {...}}`` (or the doc fields next to ``id``)."""
+def parse_jsonl(text: str) -> dict[str, dict[str, Any]]:
+    """Parse records shaped ``{"id": ..., "data": {...}}`` (or the doc fields next to ``id``)."""
     out: dict[str, dict[str, Any]] = {}
-    for n, line in enumerate(Path(path).read_text().splitlines(), 1):
+    for n, line in enumerate(text.splitlines(), 1):
         if not line.strip():
             continue
         rec = json.loads(line)
@@ -134,6 +134,11 @@ def load_jsonl(path: str | Path) -> dict[str, dict[str, Any]]:
             k: v for k, v in rec.items() if k != "id"
         }
     return out
+
+
+def load_jsonl(path: str | Path) -> dict[str, dict[str, Any]]:
+    """Read a JSONL file of extraction records (see :func:`parse_jsonl`)."""
+    return parse_jsonl(Path(path).read_text())
 
 
 def evaluate(

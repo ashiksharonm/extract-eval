@@ -1,0 +1,90 @@
+name: extract-eval regression gate
+description: >-
+  Compare candidate extraction predictions against a baseline on a gold set. Reports per-field F1
+  deltas with paired-bootstrap 95% CIs, writes a job summary / PR comment, and fails on a
+  significant regression.
+author: Ashik Sharon M
+branding:
+  icon: check-circle
+  color: blue
+inputs:
+  gold:
+    description: Gold JSONL ({"id", "data"} per line)
+    required: true
+  config:
+    description: extract-eval YAML config
+    required: true
+  baseline:
+    description: Baseline predictions JSONL
+    required: true
+  candidate:
+    description: Candidate predictions JSONL
+    required: true
+  min-drop:
+    description: Ignore F1 drops smaller than this
+    default: "0.0"
+  significance:
+    description: "ci (95% CI of the delta must be below 0) or none (any drop counts)"
+    default: ci
+  scope:
+    description: any, micro or fields
+    default: any
+  n-boot:
+    description: Bootstrap resamples
+    default: "1000"
+  comment-on-pr:
+    description: Post (and update) the result as a pull request comment
+    default: "false"
+  github-token:
+    description: Token used for the PR comment (needs pull-requests - write)
+    default: ${{ github.token }}
+  python-version:
+    description: Python version
+    default: "3.11"
+outputs:
+  regressed:
+    description: "true when a regression was detected"
+    value: ${{ steps.gate.outputs.regressed }}
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-python@v5
+      with:
+        python-version: ${{ inputs.python-version }}
+    - name: Install extract-eval
+      shell: bash
+      run: python -m pip install --quiet "${{ github.action_path }}"
+    - name: Run gate
+      id: gate
+      shell: bash
+      env:
+        IN_GOLD: ${{ inputs.gold }}
+        IN_CONFIG: ${{ inputs.config }}
+        IN_BASE: ${{ inputs.baseline }}
+        IN_CAND: ${{ inputs.candidate }}
+        IN_MIN_DROP: ${{ inputs.min-drop }}
+        IN_SIG: ${{ inputs.significance }}
+        IN_SCOPE: ${{ inputs.scope }}
+        IN_NBOOT: ${{ inputs.n-boot }}
+      run: |
+        set +e
+        extract-eval compare "$IN_BASE" "$IN_CAND" --gold "$IN_GOLD" --config "$IN_CONFIG" \
+          --min-drop "$IN_MIN_DROP" --significance "$IN_SIG" --scope "$IN_SCOPE" \
+          --n-boot "$IN_NBOOT" --summary "${GITHUB_STEP_SUMMARY:-/dev/null}" \
+          --gate-markdown "$RUNNER_TEMP/extract-eval-gate.md" --out "$RUNNER_TEMP/extract-eval-compare.json"
+        code=$?
+        echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+        if [ "$code" -eq 1 ]; then echo "regressed=true" >> "$GITHUB_OUTPUT"; else echo "regressed=false" >> "$GITHUB_OUTPUT"; fi
+        exit 0
+    - name: Comment on PR
+      if: inputs.comment-on-pr == 'true' && github.event_name == 'pull_request' && hashFiles(format('{0}/extract-eval-gate.md', runner.temp)) != ''
+      shell: bash
+      env:
+        GH_TOKEN: ${{ inputs.github-token }}
+        PR: ${{ github.event.pull_request.number }}
+      run: gh pr comment "$PR" --repo "$GITHUB_REPOSITORY" --edit-last --create-if-none --body-file "$RUNNER_TEMP/extract-eval-gate.md" || echo "PR comment skipped (insufficient token permissions)"
+    - name: Fail on regression or error
+      shell: bash
+      run: |
+        code="${{ steps.gate.outputs.exit_code }}"
+        if [ "$code" != "0" ]; then echo "extract-eval gate exit code $code" >&2; exit "$code"; fi

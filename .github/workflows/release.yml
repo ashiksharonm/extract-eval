@@ -1,0 +1,22 @@
+# Builds the sdist/wheel on a version tag and attaches them to a GitHub release.
+# Deliberately does not publish to PyPI.
+name: Release
+on:
+  push:
+    tags: ["v*"]
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install build && python -m build
+      - name: Tag matches package version
+        run: python -c "import re,sys; v=re.search(r'__version__ = \"(.+?)\"', open('src/extract_eval/__init__.py').read()).group(1); sys.exit(0 if 'v'+v=='${GITHUB_REF_NAME}' else 'tag != version '+v)"
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" dist/* --generate-notes

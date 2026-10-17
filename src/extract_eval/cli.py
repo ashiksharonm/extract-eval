@@ -5,10 +5,11 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+from dataclasses import asdict
 from pathlib import Path
 
-from .compare import compare_reports
 from .config import Config
+from .gate import gate_from_reports, render_gate_markdown, run_gate
 from .metrics import evaluate, load_jsonl
 from .report import render_comparison, render_markdown
 
@@ -31,16 +32,44 @@ def _score(a: argparse.Namespace) -> int:
 
 
 def _compare(a: argparse.Namespace) -> int:
-    ra, rb = (json.loads(Path(p).read_text()) for p in (a.a, a.b))
-    cmp = compare_reports(ra, rb, a.n_boot, a.seed)
-    out = Path(a.out)
-    out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps(cmp, indent=2))
-    md = Path(a.markdown) if a.markdown else out.with_suffix(".md")
-    md.write_text(render_comparison(cmp, Path(a.a).stem, Path(a.b).stem))
-    print(f"micro_f1 delta={cmp['micro_f1']['delta']} flips: "
-          f"-{len(cmp['flips']['pass_to_fail'])} +{len(cmp['flips']['fail_to_pass'])} -> {out}")
-    return 0
+    base, cand = a.baseline or a.a, a.candidate or a.b
+    if not base or not cand:
+        print("error: give BASELINE and CANDIDATE (or --a/--b)", file=sys.stderr)
+        return 2
+    jsonl = base.endswith(".jsonl") or cand.endswith(".jsonl")
+    if jsonl:
+        if not (a.gold and a.config):
+            print("error: comparing JSONL predictions needs --gold and --config", file=sys.stderr)
+            return 2
+        gold = load_jsonl(a.gold)
+        cfg = Config.from_yaml(a.config)
+        res = run_gate(gold, load_jsonl(base), load_jsonl(cand), cfg, a.n_boot, a.seed,
+                       a.min_drop, a.significance, a.scope)
+    else:
+        ra, rb = (json.loads(Path(p).read_text()) for p in (base, cand))
+        res = gate_from_reports(ra, rb, a.n_boot, a.seed, a.min_drop, a.significance, a.scope)
+    cmp = res.comparison
+    names = (Path(base).stem, Path(cand).stem)
+    if a.out:
+        out = Path(a.out)
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(json.dumps({**cmp, "regressions": [asdict(r) for r in res.regressions]},
+                                  indent=2))
+        md_path = Path(a.markdown) if a.markdown else out.with_suffix(".md")
+        md_path.write_text(render_comparison(cmp, *names))
+    md = render_gate_markdown(res, *names)
+    if a.summary:
+        with open(a.summary, "a", encoding="utf-8") as fh:
+            fh.write(md + "\n")
+    if a.gate_markdown:
+        Path(a.gate_markdown).write_text(md)
+    print(f"micro_f1 delta={cmp['micro_f1']['delta']} "
+          f"flips: -{len(cmp['flips']['pass_to_fail'])} +{len(cmp['flips']['fail_to_pass'])} "
+          f"regressions={len(res.regressions)}")
+    for r in res.regressions:
+        print(f"REGRESSION {r.metric}: {r.baseline} -> {r.candidate} "
+              f"(delta {r.delta:+.4f}, 95% CI {r.ci95})", file=sys.stderr)
+    return 1 if res.regressed else 0
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -56,16 +85,34 @@ def main(argv: list[str] | None = None) -> int:
     s.add_argument("--n-boot", type=int, default=1000)
     s.add_argument("--seed", type=int, default=0)
     s.set_defaults(fn=_score)
-    c = sub.add_parser("compare", help="compare two report.json files")
-    c.add_argument("--a", required=True)
-    c.add_argument("--b", required=True)
-    c.add_argument("--out", required=True)
-    c.add_argument("--markdown")
+    c = sub.add_parser(
+        "compare",
+        help="regression gate: compare BASELINE and CANDIDATE (predictions JSONL or report.json)",
+        description="Exit 1 when a metric significantly regressed, 2 on usage errors.")
+    c.add_argument("baseline", nargs="?", help="baseline predictions .jsonl or report .json")
+    c.add_argument("candidate", nargs="?", help="candidate predictions .jsonl or report .json")
+    c.add_argument("--a", help="baseline report.json (legacy spelling)")
+    c.add_argument("--b", help="candidate report.json (legacy spelling)")
+    c.add_argument("--gold", help="gold JSONL (required for prediction JSONL inputs)")
+    c.add_argument("--config", help="YAML config (required for prediction JSONL inputs)")
+    c.add_argument("--out", help="write comparison JSON here (markdown next to it)")
+    c.add_argument("--markdown", help="markdown path for the long comparison table")
+    c.add_argument("--summary", help="append gate markdown here, e.g. $GITHUB_STEP_SUMMARY")
+    c.add_argument("--gate-markdown", help="write gate markdown to this file (PR comment body)")
+    c.add_argument("--min-drop", type=float, default=0.0,
+                   help="ignore F1 drops smaller than this (default 0)")
+    c.add_argument("--significance", choices=["ci", "none"], default="ci",
+                   help="ci: require the 95%% CI of the delta below 0; none: any drop counts")
+    c.add_argument("--scope", choices=["any", "micro", "fields"], default="any")
     c.add_argument("--n-boot", type=int, default=1000)
     c.add_argument("--seed", type=int, default=0)
     c.set_defaults(fn=_compare)
     args = p.parse_args(argv)
-    return args.fn(args)
+    try:
+        return int(args.fn(args))
+    except (OSError, ValueError, KeyError) as exc:  # bad path, malformed JSONL/YAML/report
+        print(f"error: {type(exc).__name__}: {exc}", file=sys.stderr)
+        return 2
 
 
 if __name__ == "__main__":
