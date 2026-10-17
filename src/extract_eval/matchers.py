@@ -124,10 +124,10 @@ class Matcher:
                 return float(normalize_text(gold) == normalize_text(pred))
             return float(abs(g - p) <= max(self.abs_tol, self.rel_tol * abs(g)) + 1e-12)
         if t == "date":
-            g, p = parse_date(gold, self.dayfirst), parse_date(pred, self.dayfirst)
-            if g is None or p is None:
+            gd, pd = parse_date(gold, self.dayfirst), parse_date(pred, self.dayfirst)
+            if gd is None or pd is None:
                 return float(normalize_text(gold) == normalize_text(pred))
-            return float(g == p)
+            return float(gd == pd)
         if t == "fuzzy":
             fn = getattr(fuzz, self.scorer)
             return fn(normalize_text(gold), normalize_text(pred)) / 100.0
@@ -145,8 +145,8 @@ class Matcher:
             g, p = parse_number(gold, loc), parse_number(pred, loc)
             if g is not None and p is not None and g == p:
                 return True
-        g, p = parse_date(gold), parse_date(pred)
-        return g is not None and g == p
+        gd, pd = parse_date(gold), parse_date(pred)
+        return gd is not None and gd == pd
 
 
 MATCHER_TYPES = ("exact", "text", "numeric", "date", "fuzzy")

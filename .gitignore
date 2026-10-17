@@ -6,3 +6,7 @@ dist/
 .pytest_cache/
 .hypothesis/
 benchmarks/.cache/
+.coverage
+coverage.xml
+htmlcov/
+.mypy_cache/
