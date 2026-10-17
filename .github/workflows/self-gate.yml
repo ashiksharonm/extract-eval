@@ -1,0 +1,31 @@
+# Dogfoods action.yml on the committed CORD-v2 predictions. Truncated -> full decode must pass;
+# the reverse direction (a real regression) must fail the gate.
+name: Self gate
+on:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Improvement passes the gate
+        uses: ./
+        with:
+          gold: benchmarks/cord_v2/gold.jsonl
+          config: benchmarks/cord.yaml
+          baseline: benchmarks/cord_v2/preds_trunc.jsonl
+          candidate: benchmarks/cord_v2/preds_full.jsonl
+      - name: Regression fails the gate
+        id: reverse
+        continue-on-error: true
+        uses: ./
+        with:
+          gold: benchmarks/cord_v2/gold.jsonl
+          config: benchmarks/cord.yaml
+          baseline: benchmarks/cord_v2/preds_full.jsonl
+          candidate: benchmarks/cord_v2/preds_trunc.jsonl
+      - name: Assert the reverse run was flagged
+        run: test "${{ steps.reverse.outcome }}" = "failure"

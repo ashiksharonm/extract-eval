@@ -3,17 +3,56 @@ on:
   push:
     branches: [main]
   pull_request:
+permissions:
+  contents: read
 jobs:
   test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.10", "3.11", "3.12"]
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-      - run: pip install -e ".[dev]"
+          cache: pip
+      - run: pip install -e ".[dev,demo]"
       - run: ruff check .
-      - run: pytest -q
+      - run: mypy
+      - run: pytest -q --cov-report=xml
+      - uses: actions/upload-artifact@v4
+        if: matrix.python-version == '3.12'
+        with:
+          name: coverage-xml
+          path: coverage.xml
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install build twine
+      - run: python -m build && twine check dist/*
+      - name: Smoke-test the built wheel
+        run: |
+          pip install dist/*.whl
+          extract-eval compare examples/pred.jsonl examples/pred.jsonl --gold examples/gold.jsonl --config examples/receipts.yaml --n-boot 50
+          python -c "import extract_eval, importlib.resources as r; assert r.files('extract_eval').joinpath('py.typed').is_file()"
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: false
+          load: true
+          tags: extract-eval-demo:ci
+      - name: Container answers its healthcheck
+        run: |
+          docker run -d --name demo -p 7860:7860 extract-eval-demo:ci
+          for i in $(seq 1 30); do curl -fs http://127.0.0.1:7860/ >/dev/null && exit 0; sleep 2; done
+          docker logs demo; exit 1

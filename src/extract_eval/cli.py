@@ -108,7 +108,11 @@ def main(argv: list[str] | None = None) -> int:
     c.add_argument("--seed", type=int, default=0)
     c.set_defaults(fn=_compare)
     args = p.parse_args(argv)
-    return int(args.fn(args))
+    try:
+        return int(args.fn(args))
+    except (OSError, ValueError, KeyError) as exc:  # bad path, malformed JSONL/YAML/report
+        print(f"error: {type(exc).__name__}: {exc}", file=sys.stderr)
+        return 2
 
 
 if __name__ == "__main__":

@@ -89,3 +89,11 @@ def test_cli_compare_jsonl_exit_codes_and_summary(tmp_path, capsys):
 def test_cli_compare_usage_errors(tmp_path):
     assert main(["compare"]) == 2
     assert main(["compare", "a.jsonl", "b.jsonl"]) == 2
+
+
+def test_cli_compare_bad_input_exits_2(tmp_path, capsys):
+    gp = tmp_path / "g.jsonl"
+    _write(gp, _gold(3))
+    assert main(["compare", str(tmp_path / "nope.jsonl"), str(gp), "--gold", str(gp),
+                 "--config", str(EX / "receipts.yaml")]) == 2
+    assert "error:" in capsys.readouterr().err
