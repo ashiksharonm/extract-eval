@@ -1,11 +1,11 @@
 # syntax=docker/dockerfile:1
-FROM python:3.11-slim AS build
+FROM python:3.14-slim AS build
 WORKDIR /src
 COPY pyproject.toml README.md LICENSE ./
 COPY src ./src
 RUN pip install --no-cache-dir build && python -m build --wheel --outdir /dist
 
-FROM python:3.11-slim
+FROM python:3.14-slim
 ENV PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1 GRADIO_ANALYTICS_ENABLED=False
 RUN useradd --create-home --uid 10001 app
 WORKDIR /app
