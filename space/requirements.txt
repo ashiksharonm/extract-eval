@@ -1,3 +1,3 @@
 extract-eval @ git+https://github.com/ashiksharonm/extract-eval@main
-gradio==5.50.0
+gradio==6.30.0
 pyyaml
